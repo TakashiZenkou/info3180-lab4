@@ -18,3 +18,8 @@ img{
 ul{
     list-style-type:none;
 }
+
+.errors{
+    color:red;
+    padding:10px;
+}

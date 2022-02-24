@@ -10,7 +10,10 @@
   {{ form.hidden_tag() }}
   {{ form.csrf_token }}
   {# Add the file upload field as you learnt for Flask-WTF #}
-  {{ form.photo}} 
+  {{ form.photo}}
+  {% if form.photo.errors %}
+  <ul class="errors">{% for error in form.photo.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+  {% endif %}
 
   <button type="submit" name="submit" class="btn btn-primary">Upload file</button>
 </form>
